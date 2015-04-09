@@ -1,0 +1,80 @@
+.heart1 {
+    position: absolute;
+    width: 100px;
+    height: 90px;
+    overflow: visible;
+}
+
+.heart1:before,
+.heart1:after {
+    position: absolute;
+    content: "";
+    left: 60px;
+    top: 0;
+    width: 60px;
+    height: 100px;
+    background: red;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+.heart1:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin :100% 100%;
+}
+
+#heart1 {
+    top: -7px;
+    left: 20px;
+    z-index: -1;
+    transform: rotate(-30deg);
+    -webkit-animation: heart1Show 3s linear;
+}
+
+#heart2 {
+    top: 29px;
+    left: 275px;
+    z-index: -1;
+    overflow: visible;
+    transform: rotate(37deg);
+    -webkit-animation: heart2Show 3s linear;
+}
+
+.heart2 {
+    position: absolute;
+    width: 100px;
+    height: 90px;
+}
+
+.heart2:before,
+.heart2:after {
+    position: absolute;
+    content: "";
+    left: 40px;
+    top: 0;
+    width: 40px;
+    height: 65px;
+    background: red;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+}
+.heart2:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin :100% 100%;
+}
+
+
+@-webkit-keyframes heart1Show {
+    0% {transform : rotate(-30deg) scale(1.0);}
+    50% {transform : rotate(-30deg) scale(1.2);}
+    100% {transform : rotate(-30deg) scale(1.0);}
+}
+
+@-webkit-keyframes heart2Show {
+    0% {transform : rotate(37deg) scale(1.0);}
+    50% {transform : rotate(37deg) scale(1.2);}
+    100% {transform : rotate(37deg) scale(1.0);}
+}
